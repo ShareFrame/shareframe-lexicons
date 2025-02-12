@@ -1,0 +1,21 @@
+{
+    "lexicon": 1,
+    "id": "social.shareframe.feed.post",
+    "defs": {
+      "main": {
+        "type": "record",
+        "key": "tid",
+        "record": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string", "maxLength": 300, "optional": true },
+            "imageUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
+            "videoUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
+            "createdAt": { "type": "string", "format": "datetime" }
+          },
+          "required": ["createdAt"]
+        }
+      }
+    }
+  }
+  
