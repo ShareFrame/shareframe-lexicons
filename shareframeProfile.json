@@ -1,0 +1,29 @@
+{
+    "lexicon": 1,
+    "id": "social.shareframe.profile",
+    "defs": {
+      "main": {
+        "type": "record",
+        "key": "self",
+        "record": {
+          "type": "object",
+          "properties": {
+            "displayName": { "type": "string", "maxLength": 64 },
+            "bio": { "type": "string", "maxLength": 256, "optional": true },
+            "avatar": { "type": "string", "format": "uri", "optional": true },
+            "bannerUri": { "type": "string", "format": "uri", "optional": true },
+            "theme": {
+              "type": "string",
+              "enum": ["light", "dark", "custom"],
+              "default": "light"
+            },
+            "primaryColor": { "type": "string", "format": "hex", "optional": true },
+            "secondaryColor": { "type": "string", "format": "hex", "optional": true },
+            "updatedAt": { "type": "string", "format": "datetime" }
+          },
+          "required": ["displayName", "updatedAt"]
+        }
+      }
+    }
+  }
+  
