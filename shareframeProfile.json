@@ -10,8 +10,8 @@
           "properties": {
             "displayName": { "type": "string", "maxLength": 64 },
             "bio": { "type": "string", "maxLength": 256, "optional": true },
-            "avatar": { "type": "string", "format": "uri", "optional": true },
-            "bannerUri": { "type": "string", "format": "uri", "optional": true },
+            "profilePicture": { "type": "string", "format": "uri", "optional": true },
+            "profileBanner": { "type": "string", "format": "uri", "optional": true },
             "theme": {
               "type": "string",
               "enum": ["light", "dark", "custom"],
@@ -21,7 +21,7 @@
             "secondaryColor": { "type": "string", "format": "hex", "optional": true },
             "updatedAt": { "type": "string", "format": "datetime" }
           },
-          "required": ["displayName", "updatedAt"]
+          "required": ["updatedAt"]
         }
       }
     }
