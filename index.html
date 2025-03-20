@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #121212;
-            color: #e0e0e0;
+            color: #d1d1d1;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -19,13 +18,13 @@
             background-size: 20px 20px;
             animation: bg-pan 10s linear infinite;
         }
-    
+
         @keyframes bg-pan {
             100% {
                 background-position: 20px 0px;
             }
         }
-    
+
         .container {
             max-width: 800px;
             margin: 40px auto;
@@ -35,29 +34,29 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
         }
-    
+
         .logo {
             max-width: 300px;
             height: auto;
             display: block;
             margin: 0 auto 30px;
         }
-    
+
         h1 {
-            color: #64b5f6;
+            color: #81d4fa;
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.8em;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-    
+
         p {
             font-size: 1.1em;
             margin-bottom: 25px;
             color: #d1d1d1;
         }
-    
+
         ul {
             list-style: none;
             padding: 0;
@@ -65,7 +64,7 @@
             flex-wrap: wrap;
             justify-content: flex-start;
         }
-    
+
         li {
             background-color: rgba(38, 50, 56, 0.8);
             padding: 20px;
@@ -78,58 +77,66 @@
             flex-direction: column;
             align-items: center;
         }
-    
+
         li:hover {
             background-color: rgba(50, 65, 73, 0.95);
         }
-    
+
         li a {
-            color: #81d4fa;
+            color: #a7e0f9;
             text-decoration: none;
             font-weight: 600;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-    
+
         li a i {
             margin-bottom: 10px;
             font-size: 1.5em;
         }
-    
+
         li a span {
             display: block;
         }
-    
+
         li a:hover {
             color: #a7e0f9;
         }
-    
+
         .footer {
             margin-top: 40px;
             text-align: center;
             font-size: 0.95em;
             color: #9e9e9e;
         }
-    
+
         .footer a {
-            color: #64b5f6;
+            color: #81d4fa;
         }
-    
+
         .section-title {
-            color: #64b5f6;
+            color: #81d4fa;
             margin-bottom: 18px;
             font-size: 1.8em;
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
+
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid #64b5f6;
+            outline-offset: 2px;
+        }
+
+        a:focus {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
-
 <body>
     <div class="container">
-        <img src="https://shareframe-branding.s3.us-east-2.amazonaws.com/banner_white.png" alt="ShareFrame Logo"
-            class="logo">
+        <img src="https://shareframe-branding.s3.us-east-2.amazonaws.com/banner_white.png" alt="ShareFrame Logo" class="logo">
 
         <h1>ShareFrame Lexicon Documentation</h1>
 
@@ -139,42 +146,42 @@
             start building with us.
         </p>
 
-        <section>
-            <h2 class="section-title">Core Lexicons</h2>
+        <section aria-labelledby="core-lexicons-title">
+            <h2 class="section-title" id="core-lexicons-title">Core Lexicons</h2>
             <ul>
                 <li>
                     <a href="https://lexicons.shareframe.social/social.shareframe.feed.post.json">
-                        <i class="fas fa-newspaper"></i>
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
                         <span>Feed Post (<code>social.shareframe.feed.post</code>)</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://lexicons.shareframe.social/social.shareframe.profile.json">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user" aria-hidden="true"></i>
                         <span>User Profile (<code>social.shareframe.profile</code>)</span>
                     </a>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Interaction Lexicons</h2>
+        <section aria-labelledby="interaction-lexicons-title">
+            <h2 class="section-title" id="interaction-lexicons-title">Interaction Lexicons</h2>
             <ul>
                 <li>
                     <a href="https://lexicons.shareframe.social/social.shareframe.like.json">
-                        <i class="fas fa-thumbs-up"></i>
+                        <i class="fas fa-thumbs-up" aria-hidden="true"></i>
                         <span>Like (<code>social.shareframe.like</code>)</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://lexicons.shareframe.social/social.shareframe.follow.json">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                         <span>Follow (<code>social.shareframe.follow</code>)</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://lexicons.shareframe.social/social.shareframe.repost.json">
-                        <i class="fas fa-retweet"></i>
+                        <i class="fas fa-retweet" aria-hidden="true"></i>
                         <span>Repost (<code>social.shareframe.repost</code>)</span>
                     </a>
                 </li>
@@ -186,5 +193,4 @@
         </p>
     </div>
 </body>
-
 </html>
