@@ -1,21 +1,46 @@
 {
-    "lexicon": 1,
-    "id": "social.shareframe.feed.post",
-    "defs": {
-      "main": {
-        "type": "record",
-        "key": "tid",
-        "record": {
-          "type": "object",
-          "properties": {
-            "text": { "type": "string", "maxLength": 300, "optional": true },
-            "imageUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
-            "videoUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
-            "createdAt": { "type": "string", "format": "datetime" }
-          },
-          "required": ["createdAt"]
-        }
+  "lexicon": 1,
+  "id": "social.shareframe.feed.post",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string", "maxLength": 300, "optional": true },
+          "imageUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
+          "videoUris": { "type": "array", "items": { "type": "string", "format": "uri" }, "optional": true },
+          "createdAt": { "type": "string", "format": "datetime" },
+          "likes": { "type": "integer", "default": 0, "optional": true },
+          "shares": { "type": "integer", "default": 0, "optional": true },
+          "comments": { "type": "integer", "default": 0, "optional": true },
+          "rewatches": { "type": "integer", "default": 0, "optional": true },
+          "saves": { "type": "integer", "default": 0, "optional": true },
+          "watchTime": { "type": "integer", "default": 0, "optional": true },
+          "locationString": { "type": "string", "optional": true },
+          "city": { "type": "string", "optional": true },
+          "region": { "type": "string", "optional": true },
+          "country": { "type": "string", "optional": true },
+          "timeZone": { "type": "string", "optional": true },
+          "geohash": { "type": "string", "optional": true },
+          "trendingScore": { "type": "number", "default": 0, "optional": true },
+          "isStory": { "type": "boolean", "default": false, "optional": true },
+          "expiresAt": { "type": "string", "format": "datetime", "optional": true },
+          "language": { "type": "string", "optional": true },
+          "tags": { "type": "array", "items": { "type": "string" }, "optional": true },
+          "keywords": { "type": "array", "items": { "type": "string" }, "optional": true },
+          "replyTo": { "type": "string", "format": "uri", "optional": true },
+          "quoteOf": { "type": "string", "format": "uri", "optional": true },
+          "authorDisplayName": { "type": "string", "optional": true },
+          "authorHandle": { "type": "string", "optional": true },
+          "imageMetadata": { "type": "object", "optional": true },
+          "videoMetadata": { "type": "object", "optional": true },
+          "editHistory": { "type": "array", "items": { "type": "object" }, "optional": true },
+          "sourceApp": { "type": "string", "optional": true }
+        },
+        "required": ["createdAt"]
       }
     }
   }
-  
+}
