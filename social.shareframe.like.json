@@ -1,0 +1,18 @@
+{
+  "lexicon": 1,
+  "id": "social.shareframe.like",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "uri",
+      "record": {
+        "type": "object",
+        "properties": {
+          "subject": { "type": "string", "format": "uri" },
+          "createdAt": { "type": "string", "format": "datetime" }
+        },
+        "required": ["subject", "createdAt"]
+      }
+    }
+  }
+}
